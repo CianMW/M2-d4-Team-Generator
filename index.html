@@ -23,26 +23,24 @@
               </div>
         </div>
         <div class="input-group col-12">
-            <select class="custom-select" id="inputGroupSelect04">
-              <option selected>How many teams  would you like?</option>
-              <option value="1">1 Team</option>
-              <option value="2">2 Teams</option>
-              <option value="3">3 Teams</option>
-              <option value="1">4 Teams</option>
-              <option value="2">5 Teams</option>
-              <option value="3">6 Teams</option>
-            </select>
+            <input type="number" min="1" max="6" id="inputGroupNumber">
+        </input>
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button">Create Teams</button>
+              <button class="btn btn-outline-secondary" id="add-groups" type="button">Create Teams</button>
             </div>
           </div>
     </div>
-        <div class="no-team-list col-2"> 
-            <h2>Names</h2>
-            <ul id="waiting-room">
-                <li>example</li>
+        <div class="no-team-list col-6"> 
+            <h2>Waiting List</h2>
+            <ul class="waiting-room" id="waiting-room">
             </ul>
+            <button type="button" class="btn btn-primary">Primary</button>
         </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row" id="teamLists">
+
     </div>
 </div>
 
