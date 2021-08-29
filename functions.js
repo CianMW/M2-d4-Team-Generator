@@ -20,15 +20,15 @@ addGroupButton.onclick = function () {
 
     for (let i = 0; i < numberInput.value; i++) {
         let teamNumber = i+1
-        let newDivItem = document.createElement("div") 
         let newULitem = document.createElement("ul")
-        let newTitleItem = document.createElement("h3")
-        newTitleItem.innerText = `Team ${teamNumber}`
-        newDivItem.classList.add("col-2")
+      //  let newTitleItem = document.createElement("h3")
+        newULitem.innerHTML = `Team ${teamNumber}`
+      //  newTitleItem.innerText = `Team ${teamNumber}`
+        newULitem.classList.add("col-2")
         newULitem.classList.add("team")
-        newDivItem.appendChild(newTitleItem)
-        newDivItem.appendChild(newULitem)
-        document.getElementById("teamLists").appendChild(newDivItem)
+      //  newDivItem.appendChild(newTitleItem)
+        //newDivItem.appendChild(newULitem)
+        document.getElementById("teamLists").appendChild(newULitem)
         
     }
     numberInput.value = "";
@@ -38,3 +38,16 @@ addGroupButton.onclick = function () {
         return Math.floor(Math.random()+num)
     }
 
+
+let assignButton = document.getElementById("assign")
+
+assignButton.onclick = function() {
+    let waitingListLocation = document.getElementById('waiting-room')
+    const person = waitingListLength[0]
+    let waitingListLength = waitingListLocation.length
+    let randonum = randomNumber(waitingListLength)
+    
+
+    let newItem = document.createElement("li")
+    newItem.innerText = waitingListLocation[randonum]
+}
